@@ -38,6 +38,8 @@ class MainActivity : AppCompatActivity() {
             false, listOf(
                 DetectionMode.HOLD_STILL,
                 DetectionMode.BLINK,
+                DetectionMode.OPEN_MOUTH,
+                DetectionMode.SMILE
             )
         )
         MNCIdentifier.setLowMemoryThreshold(50) // for face detection

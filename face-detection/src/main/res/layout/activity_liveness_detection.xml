@@ -12,10 +12,10 @@
         android:id="@+id/graphic_overlay"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     <ToggleButton
         android:id="@+id/tg_mute"
         android:layout_width="24dp"
@@ -44,11 +44,14 @@
     <View
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@drawable/border_dash"
         app:layout_constraintBottom_toBottomOf="@id/iv_face"
-        app:layout_constraintTop_toTopOf="@id/iv_face"
         app:layout_constraintEnd_toEndOf="@id/iv_face"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/iv_face"
-        android:background="@drawable/border_dash"/>
+        app:layout_constraintTop_toTopOf="@id/iv_face"
+        app:layout_constraintVertical_bias="1.0" />
+
     <View
         android:id="@+id/view_top"
         android:layout_width="match_parent"
@@ -57,14 +60,17 @@
         android:alpha="0.5"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/iv_face"/>
+
     <View
         android:id="@+id/view_bottom"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@color/black"
         android:alpha="0.5"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/iv_face"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp" />
 
     <View
         android:layout_width="0dp"
@@ -88,30 +94,42 @@
 
     <TextView
         android:id="@+id/tv_instruction"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Please move your face to the centre of the face frame"
-        android:gravity="center"
-        android:textColor="@color/white"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
         android:layout_margin="16dp"
+        android:layout_marginStart="167dp"
+        android:layout_marginTop="267dp"
+        android:layout_marginEnd="174dp"
+        android:layout_marginBottom="159dp"
+        android:gravity="center"
+        android:rotationX="15"
+        android:text="ضع وجهك داخل الأطار الموضح في الشاشة"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/tv_timer"
-        app:layout_constraintBottom_toBottomOf="parent"
-        />
+        app:layout_constraintBottom_toBottomOf="@+id/view_bottom"
+        app:layout_constraintEnd_toEndOf="@+id/view_bottom"
+        app:layout_constraintStart_toStartOf="@+id/view_bottom"
+        app:layout_constraintTop_toTopOf="@+id/view_bottom"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/tv_timer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:textSize="48sp"
-        tools:text="21"
+        android:layout_marginTop="307dp"
+        android:layout_marginBottom="227dp"
         android:padding="8dp"
         android:textColor="#FF2B2B"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_bottom"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iv_face"
-        app:layout_constraintBottom_toTopOf="@id/tv_instruction"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_bottom"
+        app:layout_constraintVertical_bias="0.49"
+        tools:text="11" />
 
     <ImageView
         android:id="@+id/iv_back"
